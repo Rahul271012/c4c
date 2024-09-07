@@ -5,6 +5,7 @@ import cors from "cors";
 import bodyParser from "body-parser";
 
 import testRouter from "./routes/test.js";
+import userRouter from "./routes/user.js";
 
 import connect from "./db/db.js";
 
@@ -20,6 +21,7 @@ connect(process.env.MONGO_URI);
 //Router Use()
 
 app.use("/test", testRouter);
+app.use("/user", userRouter);
 
 app.listen(6969, () => {
   console.log("Listening on 6969...");
