@@ -12,7 +12,7 @@ export default function Login(){
       <>
         {isAuthenticated ? (
           <>
-            <h1>{user && user.name ? `Hello Bsdk, ${user.name},Dalle` : "Hello, User"}</h1>
+            <h1>{user && user.name ? `Hello, ${user.name}` : "Hello, User"}</h1>
             <button
               onClick={() =>
                 logout({ logoutParams: { returnTo: window.location.origin } })
